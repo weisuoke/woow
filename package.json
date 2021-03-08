@@ -1,10 +1,15 @@
 {
   "name": "woow",
   "version": "0.0.1",
-  "description": "",
+  "description": "woow 是一个脚手架工具",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:comment": "启动开发环境",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .ts 的文件",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0",
+    "prettier:comment": "自动格式化 src 目录下的所有 .ts 文件",
+    "prettier": "prettier --write \"src/**/*.ts\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/weisuoke/woow/issues"
   },
-  "homepage": "https://github.com/weisuoke/woow#readme"
+  "homepage": "https://github.com/weisuoke/woow#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.32",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "prettier": "^2.2.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.3"
+  }
 }
