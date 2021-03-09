@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "woow 是一个脚手架工具",
   "main": "index.js",
+  "bin": {
+    "woow-cli": "./bin/woow-cli.js"
+  },
   "scripts": {
     "dev:comment": "启动开发环境",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
